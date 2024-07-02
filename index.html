@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition of two number</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+      }
+      .main {
+        width: 40vh;
+        height: 60vh;
+        background: linear-gradient(#ff9968, #ff5e63) no-repeat;
+        /* background-color: aquamarine; */
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        margin-top: 15px;
+        box-shadow: 3px 3px 6px grey;
+      }
+      h1 {
+        color: black;
+        text-shadow: 5px 5px 5px white;
+        text-align: center;
+      }
+      .input-box {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      input {
+        align-items: center;
+        height: 30px;
+        width: 35vh;
+        border-radius: 5px;
+        border-color: gray;
+        box-shadow: 3px 3px 5px gray;
+        margin-top: 20px;
+        border: none;
+      }
+      .buttons-arithmatic {
+        width: 80px;
+        height: 28px;
+        background: black;
+        color: white;
+        box-shadow: 3px 3px 5px gray;
+        border-radius: 5px;
+      }
+      .btns {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      @media (max-width: 600px) {
+        .main {
+          width: 90%;
+          height: 80vh;
+          padding: 10px;
+          margin-top: 50px;
+        }
+
+        h1 {
+          font-size: 32px;
+          margin-top: 50px;
+        }
+
+        input {
+          width: 90%;
+          font-size: 16px;
+        }
+
+        .buttons-arithmatic {
+          width: 60px;
+          height: 28px;
+          font-size: 14px;
+        }
+      }
+    </style>
+    <script>
+      function add() {
+        num1 = document.getElementById("Fnum").value;
+        num2 = document.getElementById("Snum").value;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        add = num1 + num2;
+        document.getElementById("Result").value = add;
+      }
+      function sub() {
+        num1 = document.getElementById("Fnum").value;
+        num2 = document.getElementById("Snum").value;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        sub = num1 - num2;
+        document.getElementById("Result").value = sub;
+      }
+      function mul() {
+        num1 = document.getElementById("Fnum").value;
+        num2 = document.getElementById("Snum").value;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        mul = num1 * num2;
+        document.getElementById("Result").value = mul;
+      }
+      function div() {
+        num1 = document.getElementById("Fnum").value;
+        num2 = document.getElementById("Snum").value;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        div = num1 / num2;
+        document.getElementById("Result").value = div;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="input-box">
+        <h1>Calculator</h1>
+        <input
+          type="text"
+          id="Fnum"
+          placeholder="Enter first number"
+        /><br /><br />
+        <input
+          type="text"
+          id="Snum"
+          placeholder="Enter second number"
+        /><br /><br />
+        <input type="text" id="Result" placeholder="Result" /><br /><br />
+      </div>
+      <div class="btns">
+        <button onclick="add()" class="buttons-arithmatic">Add</button>
+        <button onclick="sub()" class="buttons-arithmatic">Sub</button>
+        <button onclick="mul()" class="buttons-arithmatic">Mul</button>
+        <button onclick="div()" class="buttons-arithmatic">Div</button>
+      </div>
+    </div>
+  </body>
+</html>
